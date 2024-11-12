@@ -4,12 +4,16 @@
 <p>Same-Origin Policy (SOP) is a browser security feature that prevents web pages from interacting with resources from different origins, blocking scripts from accessing content in other sites, tabs, or browser windows.
 
 <p>CORS (Cross-Origin Resource Sharing) lets web pages bypass SOP to request resources from different origins (e.g., domain, scheme, or port). Insecure CORS settings can lead to data theft.
+
+<p>Potential CORS issues:</p>
+  - Unauthenticated APIs
+  - Cookie authentication + Reflected Origin header 
   
-<p><textarea cols=200 rows=20 id="output">no vulnerable</textarea>
+<p><textarea cols=200 rows=10 id="output">no vulnerable</textarea>
 
 <form id="urlForm">
         <label for="urlInput"><b>API URL:</b></label>
-        <input size=200 type="text" id="urlInput" name="urlInput" value="https://breitlingpp-api-was.aitcentral.com/api/External/product/AB01766A1A1X1" required>
+        <input size=190 type="text" id="urlInput" name="urlInput" value="https://breitlingpp-api-was.aitcentral.com/api/External/product/AB01766A1A1X1" required>
         <button type="submit">Submit</button>
 </form>
   
@@ -41,7 +45,7 @@ document.getElementById('urlForm').addEventListener('submit', function(event) {
 
 <p>If you see external site data in the text area, then the API is vulnerable.
 
-<p>This data could be stolen by any external third party site when you are logged in the vulnerable application.
+<p>This data could be stolen by any external third party site you visit menawhile you are logged in the vulnerable application.
  
 </body>
 </html>
