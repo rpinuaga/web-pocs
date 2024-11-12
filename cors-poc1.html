@@ -8,7 +8,7 @@
 <p><textarea cols=200 rows=20 id="output">no vulnerable</textarea>
 
 <form id="urlForm">
-        <label for="urlInput"><b>URL:</b></label>
+        <label for="urlInput"><b>API URL:</b></label>
         <input size=200 type="text" id="urlInput" name="urlInput" value="https://breitlingpp-api-was.aitcentral.com/api/External/product/AB01766A1A1X1" required>
         <button type="submit">Submit</button>
 </form>
@@ -41,7 +41,7 @@ document.getElementById('urlForm').addEventListener('submit', function(event) {
 
 <p>If you see external site data in the text area, then the API is vulnerable.
 
-<p>This data could be stolen by an external third party site when you are logged in the vulnerable application.
+<p>This data could be stolen by any external third party site when you are logged in the vulnerable application.
  
 </body>
 </html>
